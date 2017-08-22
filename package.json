@@ -11,5 +11,8 @@
   "dependencies": {
     "angular": "^1.6.4",
     "express": "^4.15.4"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1"
   }
 }
