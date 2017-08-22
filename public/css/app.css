@@ -1,0 +1,53 @@
+
+body{
+   /*background: #d9dce0;*/
+   /*background: -webkit-linear-gradient(left, #0f53ad, #054191); /* For Safari 5.1 to 6.0 
+    background: -o-linear-gradient(right, #0f53ad, #054191); /* For Opera 11.1 to 12.0 
+    background: -moz-linear-gradient(right, #0f53ad, #054191); /* For Firefox 3.6 to 15 
+    background: linear-gradient(to right, #0f53ad, #054191); /* Standard syntax 
+    background-repeat: no-repeat;*/
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #050505;
+}
+
+#hidden{
+    visibility: hidden
+}
+
+.content-area{
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.sample-show-hide{
+    transition: all linear 2s;
+}
+
+.sample-show-hide.ng-hide{
+    opacity: 0.5;
+}
+
+.red {
+    color: red;
+}
+
+.orange{
+    color: orange;
+}
+
+.blue{
+    background-color: #c9ddfc;
+}
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
+#upperSpace {
+    margin-top: 15%;
+}
+
+
