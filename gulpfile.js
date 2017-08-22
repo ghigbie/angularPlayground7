@@ -1,5 +1,6 @@
 const gulp = require('gulp');
 const del  = require('del');
+const zip  = require('zip');
 const sass = require('gulp-sass');
 const concat = require('gulp-concat');
 const uglify = require('gulp-uglify');
