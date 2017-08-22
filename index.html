@@ -15,7 +15,7 @@
             </div>
         </nav>
         
-        <div class="container main-content" ng-controller="PersonListController">
+        <div class="container main-content">
             
             <div class="row">
                 <div>
@@ -43,7 +43,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-8">
+                <div class="col-md-8" ng-controller="PersonListController">
                     <div>
                         <table class="table table-bordered">
                             <th>#</th>
@@ -82,7 +82,7 @@
                     </div>
                 </div>
                 
-                <div class="col-md-4">
+                <div class="col-md-4" ng-controller="PersonDetalController">
                     <div class="panel panel-default">
                         <div class="panel-heading">Details</div>
                         <div class="panel-body">
@@ -112,5 +112,6 @@
         <script src="./node_modules/angular/angular.min.js"></script>
         <script src="./modules/contactsApp.js"></script>
         <script src="./controllers/PersonListController.js"></script>
+        <script src="./controllers/PersonDetailController.js"></script>
     </body>
 </html>
