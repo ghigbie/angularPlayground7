@@ -35,7 +35,6 @@ gulp.task('scripts', () => {
         .pipe(minifyCss())
         .pipe(sourcemaps.write())
         .pipe(gulp.dest(DIST_PATH));
-    console.log(`Ending scripts task`);
 });
 
 //Clean
