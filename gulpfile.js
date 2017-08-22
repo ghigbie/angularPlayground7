@@ -16,12 +16,6 @@ let SCRIPTS_PATH = 'public/scripts/**/*.js';
 
 //Styles
 gulp.task('styles', () => {
-    console.log(`Starting styles task`);
-    console.log(`Ending styles task`);
-});
-
-//Scripts
-gulp.task('scripts', () => {
     console.log(`Starting scripts task`);
     return gulp.src(['public/css/app.css', STYLES_PATH])
         .pipe(plumber( (err) => {
@@ -35,6 +29,12 @@ gulp.task('scripts', () => {
         .pipe(minifyCss())
         .pipe(sourcemaps.write())
         .pipe(gulp.dest(DIST_PATH));
+});
+
+//Scripts
+gulp.task('scripts', () => {
+    console.log(`Starting scripts task`);
+    console.log(`Ending scripts task`);
 });
 
 //Clean
