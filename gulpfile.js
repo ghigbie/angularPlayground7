@@ -4,6 +4,7 @@ const zip  = require('zip');
 const sass = require('gulp-sass');
 const concat = require('gulp-concat');
 const uglify = require('gulp-uglify');
+const plumber = require('gulp-plumber');
 const minifyCss = require('gulp-minify-css');
 const sourcemaps = require('gulp-sourcemaps');
 const autoprefixer = require('gulp-autoprefixer');
@@ -20,9 +21,20 @@ gulp.task('styles', () => {
 });
 
 //Scripts
-
 gulp.task('scripts', () => {
     console.log(`Starting scripts task`);
+    return gulp.src(['public/css/app.css', STYLES_PATH])
+        .pipe(plumber( (err) => {
+            console.log(`Styles task error!`);
+            console.log(err);
+            this.emit('end'); 
+        }))
+        .pipe(sourcemaps.init())
+        .pipe(autoprefixer())
+        .pipe(concat('styles.css'))
+        .pipe(minifyCss())
+        .pipe(sourcemaps.write())
+        .pipe(gulp.dest(DIST_PATH));
     console.log(`Ending scripts task`);
 });
 
